@@ -10,6 +10,7 @@ machines:
     - management
     - cluster
     - service
+    - storage
     portMappings:
     - containerPort: 22
     privileged: true
