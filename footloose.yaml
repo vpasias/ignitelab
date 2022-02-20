@@ -12,6 +12,7 @@ machines:
     - service
     portMappings:
     - containerPort: 22
+    privileged: true
     # This is by default "docker". However, just set this to "ignite" and it'll work with Ignite :)
     backend: ignite
     # Optional configuration parameters for ignite:
