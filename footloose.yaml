@@ -1,0 +1,22 @@
+cluster:
+  name: cluster
+  privateKey: cluster-key
+machines:
+- count: 3
+  spec:
+    image: weaveworks/ignite-rockylinux:latest
+    name: n%d
+    networks:
+    - management
+    - cluster
+    - service
+    portMappings:
+    - containerPort: 22
+    # This is by default "docker". However, just set this to "ignite" and it'll work with Ignite :)
+    backend: ignite
+    # Optional configuration parameters for ignite:
+    ignite:
+      cpus: 4
+      memory: 16GB
+      diskSize: 80GB
+      kernel: "weaveworks/ignite-kernel:5.10.77"
