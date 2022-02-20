@@ -4,13 +4,10 @@ cluster:
 machines:
 - count: 3
   spec:
-    image: weaveworks/ignite-ubuntu:latest
+    image: weaveworks/ignite-rockylinux:latest
     name: n%d
     networks:
     - management
-    - cluster
-    - service
-    - storage
     portMappings:
     - containerPort: 22
     # This is by default "docker". However, just set this to "ignite" and it'll work with Ignite :)
