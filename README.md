@@ -1,1 +1,1 @@
-# Lab configurations with ignite
+# Lab configurations with Ignite
