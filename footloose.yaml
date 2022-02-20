@@ -4,7 +4,7 @@ cluster:
 machines:
 - count: 3
   spec:
-    image: weaveworks/ignite-rockylinux:latest
+    image: weaveworks/ignite-ubuntu:latest
     name: n%d
     networks:
     - management
@@ -13,12 +13,11 @@ machines:
     - storage
     portMappings:
     - containerPort: 22
-    privileged: true
     # This is by default "docker". However, just set this to "ignite" and it'll work with Ignite :)
     backend: ignite
     # Optional configuration parameters for ignite:
     ignite:
       cpus: 4
       memory: 16GB
-      diskSize: 80GB
+      diskSize: 20GB
       kernel: "weaveworks/ignite-kernel:5.10.77"
