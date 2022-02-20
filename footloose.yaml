@@ -6,8 +6,6 @@ machines:
   spec:
     image: weaveworks/ignite-rockylinux:latest
     name: n%d
-    networks:
-    - management
     portMappings:
     - containerPort: 22
     # This is by default "docker". However, just set this to "ignite" and it'll work with Ignite :)
